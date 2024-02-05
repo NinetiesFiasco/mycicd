@@ -24,6 +24,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Run as script
       run: |
+        git switch staging
         git pull
       # npm ci
       # npm run build --if-present
