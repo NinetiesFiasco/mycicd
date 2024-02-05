@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000
 const MESSAGE = process.env.MESSAGE || 'no branch'
 
 app.get('/', (req, res) => {
-  res.send(`Hi in my CI CD git hub pipeline! branch: ${MESSAGE} common baby`)
+  res.send(`Hi in my CI CD git hub pipeline! branch: ${MESSAGE} is it work???`)
 })
 
 app.listen(PORT, () => {
