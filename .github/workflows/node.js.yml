@@ -20,11 +20,14 @@ jobs:
         node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Run as script
-      run: |
-        git switch staging
-        git pull
+        steps:
+          - uses: actions/checkout@v3
+          
+          - name: Run as script
+            run: git switch staging
+            
+          - name: Run as script
+            run: git pull
+        
       # npm ci
       # npm run build --if-present
