@@ -5,9 +5,11 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "staging" ]
+    branches: 
+      - staging
   pull_request:
-    branches: [ "staging" ]
+    branches: 
+      - staging
 
 jobs:
   build:
@@ -23,3 +25,6 @@ jobs:
         steps:
           - name: Checkout repository
             uses: actions/checkout@v3
+
+          - name: Install dependencies
+            run: npm ci
